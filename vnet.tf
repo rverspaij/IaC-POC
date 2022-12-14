@@ -1,3 +1,9 @@
+resource "azurerm_resource_group" "rg" {
+  name     = var.default-resourcegroup
+  location = var.default-location
+  tags     = var.default-tags
+}
+
 resource "azurerm_virtual_network" "poc-vnet" {
   name                = "${var.default-name}-vnet"
   address_space       = ["10.0.0.0/16"]
