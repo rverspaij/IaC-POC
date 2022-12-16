@@ -12,6 +12,13 @@ resource "azurerm_subnet" "poc-subnet" {
   address_prefixes     = ["10.0.2.0/24"]
 }
 
+resource "azurerm_subnet" "dmz" {
+  name                 = "${var.default-name}-dmz"
+  resource_group_name  = azurerm_resource_group.rg.name
+  virtual_network_name = azurerm_virtual_network.poc-vnet.name
+  address_prefixes     = ["10.0.4.0/24"]
+}
+
 resource "azurerm_network_interface" "poc-nic" {
   name                = "${var.default-name}-nic"
   location            = var.default-location
