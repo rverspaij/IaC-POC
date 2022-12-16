@@ -5,14 +5,14 @@ variable "default-name" {
 
 variable "username" {
   description = "Fill in your username to login on your servers"
-  type = string
-  sensitive = true
+  type        = string
+  sensitive   = true
 }
 
 variable "password" {
   description = "Fill in your password to login on your servers"
-  type = string
-  sensitive = true
+  type        = string
+  sensitive   = true
 }
 
 variable "default-location" {
