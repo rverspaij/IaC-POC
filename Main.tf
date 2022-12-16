@@ -6,8 +6,6 @@ terraform {
       version = "~> 3.0.2"
     }
   }
-  #Minimal required version.
-  required_version = ">= 1.1.0"
 }
 
 #Make sure every resource in resource group gets deleted when destory function is called.
